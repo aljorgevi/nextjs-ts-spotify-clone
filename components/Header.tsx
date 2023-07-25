@@ -70,7 +70,7 @@ const Header: FC<HeaderProps> = ({ className, children }) => {
 						</div>
 						<div>
 							<Button onClick={() => {}} className='bg-white px-6 py-2'>
-								Sign Up
+								Log in
 							</Button>
 						</div>
 					</>
