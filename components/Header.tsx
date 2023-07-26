@@ -11,6 +11,7 @@ import { useAuthModal } from '@/hooks/useAuthModal'
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useUser } from '@/hooks/useUser'
 import { FaUserAlt } from 'react-icons/fa'
+import { toast } from 'react-hot-toast'
 
 interface HeaderProps {
 	children?: React.ReactNode
@@ -31,7 +32,9 @@ const Header: FC<HeaderProps> = ({ className, children }) => {
 
 		if (error) {
 			console.error(error)
-			// toast.error(error.message);
+			toast.error('There was an error logging out.')
+		} else {
+			toast.success("You've been logged out.")
 		}
 	}
 
